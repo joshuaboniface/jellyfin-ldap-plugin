@@ -13,7 +13,7 @@ jobs:
         run: echo "::set-output name=version::${GITHUB_REF/refs\/tags\//}"
 
       - name: Publish release on GitHub
-        uses: test-room-7/action-publish-release-drafts@v0
+        uses: test-room-7/action-publish-release-drafts@v0.1.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           tag-name: ${{ steps.get-version.outputs.version }}
